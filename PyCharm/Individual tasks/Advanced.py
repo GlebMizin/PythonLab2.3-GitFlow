@@ -14,19 +14,17 @@ if __name__ == '__main__':
 
     # Loop through all characters of the input string
     for i in range(len(StrList)):
-        Counter += 1
 
         # Checking if a symbol is a punctuation mark
-        for j in range(len(PunctMarks)):
-            if StrList[i] == PunctMarks[j]:
-                WordLen = Counter - 1
+        if StrList[i] in PunctMarks:
+            WordLen = Counter
+            Counter = 0
 
-                # Determine the minimum length of a word
-                if 0 < WordLen < MinWordLen:
-                    MinWordLen = WordLen
-                    Counter = 0
-                Counter = 0
-                break
+            # Determine the minimum length of a word
+            if 0 < WordLen < MinWordLen:
+                MinWordLen = WordLen
+        else:
+            Counter += 1
 
     # Checking the last word, in case of a forgotten dot at the end
     WordLen = Counter

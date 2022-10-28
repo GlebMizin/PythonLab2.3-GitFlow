@@ -4,8 +4,6 @@
 
 if __name__ == '__main__':
     text = ""
-    PlusCounter = 0
-    MultiCounter = 0
     print("Print your text: ")
 
     # Multiline Input
@@ -16,14 +14,11 @@ if __name__ == '__main__':
         else:
             break
 
-    TextToList = list(text)
+    StrToList = list(text)
 
     # Counting symbols "+" and "*"
-    for i in range(len(text)-1):
-        if TextToList[i] == "+":
-            PlusCounter += 1
-        elif TextToList[i] == "*":
-            MultiCounter += 1
+    PlusCounter = StrToList.count("+")
+    MultiCounter = StrToList.count("*")
 
     # Output, with f lines
     print(f'Number of "+" is: {PlusCounter} \n'
