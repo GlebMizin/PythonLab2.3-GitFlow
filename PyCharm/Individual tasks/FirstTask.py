@@ -14,12 +14,12 @@ if __name__ == '__main__':
         else:
             break
 
-    StrToList = list(text)
+    str_to_list = list(text)
 
     # Counting symbols "+" and "*"
-    PlusCounter = StrToList.count("+")
-    MultiCounter = StrToList.count("*")
+    plus_counter = str_to_list.count("+")
+    multi_counter = str_to_list.count("*")
 
     # Output, with f lines
-    print(f'Number of "+" is: {PlusCounter} \n'
-          f'Number of "*" is: {MultiCounter}')
+    print(f'Number of "+" is: {plus_counter} \n'
+          f'Number of "*" is: {multi_counter}')

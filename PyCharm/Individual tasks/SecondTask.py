@@ -3,17 +3,17 @@
 
 
 if __name__ == '__main__':
-    Sentence = str(input("Enter your sentence: "))
-    Sen_List = list(Sentence)
+    sentence = str(input("Enter your sentence: "))
+    sen_list = list(sentence)
 
-    for i in range(len(Sentence)-2):
+    for i in range(len(sentence)-2):
 
         # Checking 3 symbols one by one
-        if Sen_List[i] == "п" and Sen_List[i+1] == "р" and Sen_List[i+2] == "о":
-            Sen_List[i] = "н"
-            Sen_List[i+1] = "е"
-            Sen_List[i+2] = "т"
+        if sen_list[i] == "п" and sen_list[i+1] == "р" and sen_list[i+2] == "о":
+            sen_list[i] = "н"
+            sen_list[i+1] = "е"
+            sen_list[i+2] = "т"
 
     # Connecting parts of list to string
-    NewSentence = "".join(Sen_List)
-    print(NewSentence)
+    new_sentence = "".join(sen_list)
+    print(new_sentence)

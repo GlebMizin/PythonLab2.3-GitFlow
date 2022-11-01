@@ -3,13 +3,13 @@
 
 
 if __name__ == '__main__':
-    WrongWord = 'роцессорп'
+    wrong_word = 'роцессорп'
 
     # Take last 3 symbols
-    LastPart = WrongWord[-3:]
+    last_part = wrong_word[-3:]
 
     # Revers of received characters
-    LastPartR = LastPart[::-1]
+    last_part_rev = last_part[::-1]
 
     # Printing 3 symbols and right part of the word without last symbol
-    print(f'Right word: {LastPartR}{WrongWord[2:-1]}')
+    print(f'Right word: {last_part_rev}{wrong_word[2:-1]}')

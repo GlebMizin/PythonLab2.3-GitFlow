@@ -3,32 +3,32 @@
 
 
 if __name__ == '__main__':
-    MinWordLen = float('inf')
+    min_word_len = float('inf')
 
     # List of punctuation marks
-    PunctMarks = [' ', ',', '-', ';', ':', '?', '!', '.']
-    Counter = 0
+    punct_marks = [' ', ',', '-', ';', ':', '?', '!', '.']
+    counter = 0
 
-    UserStr = str(input("Enter your sentence: "))
-    StrList = list(UserStr)
+    user_str = str(input("Enter your sentence: "))
+    str_list = list(user_str)
 
     # Loop through all characters of the input string
-    for i in range(len(StrList)):
+    for i in range(len(str_list)):
 
         # Checking if a symbol is a punctuation mark
-        if StrList[i] in PunctMarks:
-            WordLen = Counter
-            Counter = 0
+        if str_list[i] in punct_marks:
+            word_len = counter
+            counter = 0
 
             # Determine the minimum length of a word
-            if 0 < WordLen < MinWordLen:
-                MinWordLen = WordLen
+            if 0 < word_len < min_word_len:
+                min_word_len = word_len
         else:
-            Counter += 1
+            counter += 1
 
     # Checking the last word, in case of a forgotten dot at the end
-    WordLen = Counter
-    if 0 < WordLen < MinWordLen:
-        MinWordLen = WordLen
+    word_len = counter
+    if 0 < word_len < min_word_len:
+        min_word_len = word_len
 
-    print(MinWordLen)
+    print(min_word_len)
